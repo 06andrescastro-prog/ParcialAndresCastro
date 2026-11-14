@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="icon" href="img/logo.svg"><title>AR · Rapadura de Caña</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script></head><body>
+<header id="hdr"></header>
+<main class="wrap" style="padding:40px 20px">
+  <h1 data-i="ar_page_t" style="color:var(--ter);text-align:center"></h1>
+  <p data-i="ar_page_p" class="sub" style="margin-top:10px"></p>
+  <model-viewer src="img/rapadura-500g.glb" alt="Rapadura de Caña 500 g" ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor" camera-controls auto-rotate shadow-intensity="1" exposure="1.1" camera-orbit="20deg 75deg 0.6m">
+    <button slot="ar-button" class="btn" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%)" data-i="ar_btn"></button>
+  </model-viewer>
+  <p class="sub" style="margin-top:20px;font-weight:600" data-i="ar_coupon"></p>
+  <p style="text-align:center"><a class="btn" href="index.html#tienda" data-i="hero_cta"></a></p>
+</main><footer id="ftr"></footer>
+<script src="app.js"></script></body></html>
