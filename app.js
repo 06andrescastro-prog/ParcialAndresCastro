@@ -1,24 +1,24 @@
 /* Rapadura de Caña — tienda bilingüe ES | EN (carrito simulado) */
 const PRODUCTS = [
-  { id: "clasica", price: 9.95, img: "img/1-empaque.jpg",
+  { id: "clasica", price: 9.95, img: "1-empaque.png",
     name: { es: "Rapadura Clásica 500 g", en: "Classic Rapadura 500 g" },
     short: { es: "Panela orgánica en polvo, 100 % jugo de caña.", en: "Organic powdered panela, 100% cane juice." },
     long: { es: "Nuestra panela original: jugo de caña orgánica cocido lentamente en un trapiche familiar de Colombia y molido en polvo fino. Sabor a caramelo y melaza, sin refinar ni blanquear.",
             en: "Our original panela: organic sugarcane juice slow-cooked at a family trapiche in Colombia and milled into a fine powder. Caramel and molasses notes, never refined or bleached." },
     ing: { es: "100 % jugo de caña de azúcar orgánica (panela).", en: "100% organic sugarcane juice (panela)." } },
-  { id: "canela", price: 10.95, img: "img/1b-canela.jpg",
+  { id: "canela", price: 10.95, img: "1b-canela.png",
     name: { es: "Rapadura con Canela 500 g", en: "Cinnamon Rapadura 500 g" },
     short: { es: "Panela con canela, ideal para café y repostería.", en: "Panela with cinnamon, perfect for coffee and baking." },
     long: { es: "Panela orgánica mezclada con canela molida. Perfecta para un flat white, avena, banana bread o el clásico chocolate colombiano.",
             en: "Organic panela blended with ground cinnamon. Perfect in a flat white, porridge, banana bread or a classic Colombian hot chocolate." },
     ing: { es: "Panela orgánica (97 %), canela molida (3 %).", en: "Organic panela (97%), ground cinnamon (3%)." } },
-  { id: "limon", price: 10.95, img: "img/1c-limon.jpg",
+  { id: "limon", price: 10.95, img: "1c-limon.png",
     name: { es: "Rapadura Limón y Jengibre 500 g", en: "Lemon & Ginger Rapadura 500 g" },
     short: { es: "Para preparar agua de panela helada en verano.", en: "Make iced agua de panela for summer." },
     long: { es: "Inspirada en la bebida más refrescante de Colombia: agua de panela con limón. Disuelve 2 cucharadas en agua fría con hielo. Ideal para el verano australiano.",
             en: "Inspired by Colombia's most refreshing drink: agua de panela with lemon. Stir 2 tablespoons into cold water with ice. Made for the Aussie summer." },
     ing: { es: "Panela orgánica (95 %), limón deshidratado (3 %), jengibre (2 %).", en: "Organic panela (95%), dried lemon (3%), ginger (2%)." } },
-  { id: "recarga", price: 17.95, img: "img/2-linea.jpg",
+  { id: "recarga", price: 17.95, img: "2-linea.png",
     name: { es: "Recarga Clásica 1 kg", en: "Classic Refill 1 kg" },
     short: { es: "Bolsa de recarga compostable, mejor precio por kilo.", en: "Compostable refill bag, best value per kilo." },
     long: { es: "La misma Rapadura Clásica en bolsa de recarga compostable de 1 kg. Menos empaque y mejor precio para quienes ya la aman.",
@@ -115,7 +115,7 @@ let LANG = (qsLang === "en" || qsLang === "es") ? qsLang : store.get("lang", "es
 let CART = store.get("cart", {});
 const t = k => T[LANG][k];
 const fmt = n => "A$" + n.toFixed(2).replace(".", LANG === "es" ? "," : ".");
-const PH = "img/pack.png";
+const PH = "pack.png";
 const imgTag = (src, alt, cls = "") => `<img src="${src}" alt="${alt}" class="${cls}" onerror="this.onerror=null;this.src='${PH}'">`;
 
 /* ---------- header / footer comunes ---------- */
@@ -125,7 +125,7 @@ function chrome() {
   if (h) h.innerHTML = `
     <div class="notice">${t("notice")}</div>
     <div class="bar">
-      <a href="index.html"><img src="img/logo.svg" alt="Rapadura de Caña"></a>
+      <a href="index.html"><img src="logo.svg" alt="Rapadura de Caña"></a>
       <nav>
         <a href="index.html#inicio">${t("nav_home")}</a>
         <a href="index.html#tienda">${t("nav_shop")}</a>
